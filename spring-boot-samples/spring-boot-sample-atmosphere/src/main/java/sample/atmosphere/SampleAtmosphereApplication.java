@@ -37,7 +37,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @SpringBootConfiguration
 @EnableAutoConfiguration
-public class SampleAtmosphereApplication {
+public class SampleAtmosphereApplication1 {
 
 	@Bean
 	public EmbeddedAtmosphereInitializer atmosphereInitializer() {
@@ -80,7 +80,7 @@ public class SampleAtmosphereApplication {
 	}
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(SampleAtmosphereApplication.class, args);
+		SpringApplication.run(SampleAtmosphereApplication1.class, args);
 	}
 
 }
