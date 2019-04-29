@@ -4,10 +4,12 @@ pipeline {
 		project_path = "spring-boot-samples/spring-boot-sample-atmosphere"
 	}
 	stages {
-        	stage('compile,test and package') {
+        	stage('compile,test and package') 
+		{
         		steps {
-				dir(project_path) {
-            				sh 'mvn clean package'
+				dir(project_path) 
+				{
+            				bat 'mvn clean package'
 				}
             		}
         	}
@@ -40,7 +42,7 @@ pipeline {
 }
 def notify(status){
     emailext (
-      to: "keerthireddygoli.com",
+      to: "keerthireddygoli@gmail.com",
       subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
         <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} 	[${env.BUILD_NUMBER}]</a></p>""",
