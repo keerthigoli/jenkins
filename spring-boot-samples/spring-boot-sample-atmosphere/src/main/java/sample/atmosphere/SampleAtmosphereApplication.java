@@ -37,7 +37,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @SpringBootConfiguration
 @EnableAutoConfiguration
-public class SampleAtmosphereApplication1 {
+public class SampleAtmosphereApplication {
 
 	@Bean
 	public EmbeddedAtmosphereInitializer atmosphereInitializer() {
